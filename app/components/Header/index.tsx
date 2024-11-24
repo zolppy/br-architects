@@ -6,13 +6,13 @@ const Header = () => {
             </h1>
             <nav className="hidden md:block">
                 <ul className="flex gap-x-8">
-                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors transition-300">
+                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors duration-300">
                         Projects
                     </li>
-                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors transition-300">
+                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors duration-300">
                         About
                     </li>
-                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors transition-300">
+                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors duration-300">
                         Contact
                     </li>
                 </ul>
