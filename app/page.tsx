@@ -14,14 +14,14 @@ const Home = () => {
             <main className="mt-[60px] flex flex-col gap-y-8 pb-4">
                 <div className="relative">
                     <Image src={architect} alt="" loading="lazy" />
-                    <div className="absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl md:flex items-center gap-x-4">
+                    <div className="absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl items-center gap-x-4 md:flex">
                         <span className="font-bold  bg-black opacity-80 p-4">
                             BR
                         </span>
                         <span className="hidden md:block">Architects</span>
                     </div>
                 </div>
-                <section className="px-8 flex flex-col gap-y-8">
+                <section className="px-5 flex flex-col gap-y-8">
                     <H2>Projects</H2>
                     <ul className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                         {projects?.length ? (
@@ -39,7 +39,7 @@ const Home = () => {
                         )}
                     </ul>
                 </section>
-                <section className="px-8 flex flex-col gap-y-8">
+                <section className="px-5 flex flex-col gap-y-8">
                     <H2>About</H2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -78,7 +78,7 @@ const Home = () => {
                         )}
                     </ul>
                 </section>
-                <section className="px-8 flex flex-col gap-y-8">
+                <section className="px-5 flex flex-col gap-y-8">
                     <H2>Contact</H2>
                     <form className="flex flex-col gap-y-4">
                         <p>
@@ -110,13 +110,13 @@ const Home = () => {
                         />
                         <button
                             type="submit"
-                            className="uppercase bg-black text-white py-2 px-4 w-fit hover:bg-gray-500"
+                            className="uppercase bg-black text-white py-2 px-5 w-fit hover:bg-gray-500"
                         >
                             Send message
                         </button>
                     </form>
                 </section>
-                <section className="px-8">
+                <section className="px-5">
                     <Image src={map} alt="" loading="lazy" />
                 </section>
             </main>

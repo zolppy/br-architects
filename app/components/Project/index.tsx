@@ -12,7 +12,7 @@ const Project = ({ title, imgPath }: IProject) => {
             <div className="absolute bg-black text-white p-2">
                 <h3>{title}</h3>
             </div>
-            <Image src={imgPath} alt="" loading="lazy" />
+            <Image src={imgPath} alt="" loading="lazy" className="w-full" />
         </li>
     );
 };
