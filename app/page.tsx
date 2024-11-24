@@ -1,18 +1,19 @@
-import Header from "./components/Header";
-import architect from "./assets/architect.jpg";
-import Project from "./components/Project";
-import H2 from "./components/H2";
-import People from "./People";
-import { people, projects } from "./mock";
-import map from "./assets/map.jpg";
+import Image from "next/image";
+import Header from "@/app/components/Header";
+import Project from "@/app/components/Project";
+import H2 from "@/app/components/H2";
+import People from "@/app/components/People";
+import { people, projects } from "@/app/mock";
+import architect from "@/public/architect.jpg";
+import map from "@/public/map.jpg";
 
-const App = () => {
+const Home = () => {
     return (
         <>
             <Header />
             <main className="mt-[60px] flex flex-col gap-y-8 pb-4">
                 <div className="relative">
-                    <img src={architect} alt="" loading="lazy" />
+                    <Image src={architect} alt="" loading="lazy" />
                     <div className="absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl md:flex items-center gap-x-4">
                         <span className="font-bold  bg-black opacity-80 p-4">
                             BR
@@ -116,7 +117,7 @@ const App = () => {
                     </form>
                 </section>
                 <section className="px-8">
-                    <img src={map} alt="" loading="lazy" />
+                    <Image src={map} alt="" loading="lazy" />
                 </section>
             </main>
             <footer className="bg-black text-white p-7 text-center">
@@ -133,4 +134,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Home;

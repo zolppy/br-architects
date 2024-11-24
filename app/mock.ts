@@ -1,12 +1,12 @@
-import house1 from "./assets/houses/house1.jpg";
-import house2 from "./assets/houses/house2.jpg";
-import house3 from "./assets/houses/house3.jpg";
-import house4 from "./assets/houses/house4.jpg";
+import house1 from "@/public/houses/house1.jpg";
+import house2 from "@/public/houses/house2.jpg";
+import house3 from "@/public/houses/house3.jpg";
+import house4 from "@/public/houses/house4.jpg";
 
-import person1 from "./assets/people/person1.jpg";
-import person2 from "./assets/people/person2.jpg";
-import person3 from "./assets/people/person3.jpg";
-import person4 from "./assets/people/person4.jpg";
+import person1 from "@/public/people/person1.jpg";
+import person2 from "@/public/people/person2.jpg";
+import person3 from "@/public/people/person3.jpg";
+import person4 from "@/public/people/person4.jpg";
 
 const projects = [
     {

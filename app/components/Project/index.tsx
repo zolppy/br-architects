@@ -1,6 +1,9 @@
+import Image from "next/image";
+import { StaticImageData } from "next/image";
+
 interface IProject {
     title: string;
-    imgPath: string;
+    imgPath: StaticImageData;
 }
 
 const Project = ({ title, imgPath }: IProject) => {
@@ -9,7 +12,7 @@ const Project = ({ title, imgPath }: IProject) => {
             <div className="absolute bg-black text-white p-2">
                 <h3>{title}</h3>
             </div>
-            <img src={imgPath} alt="" loading="lazy" />
+            <Image src={imgPath} alt="" loading="lazy" />
         </li>
     );
 };
