@@ -33,7 +33,6 @@ const Home = () => {
                     <Image
                         src={architect}
                         alt="Building seen from below with blue sky and clouds."
-                        loading="lazy"
                         className="w-full"
                     />
                     <Logo />

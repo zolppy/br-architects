@@ -18,7 +18,6 @@ const Project = ({ title, imgPath, imgAlt, imgTitle }: IProject) => {
                 src={imgPath}
                 alt={imgAlt}
                 title={imgTitle}
-                loading="lazy"
                 className="w-full"
             />
         </li>
