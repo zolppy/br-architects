@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
 import Header from "@/app/components/Header";
 import Project from "@/app/components/Project";
 import H2 from "@/app/components/H2";
@@ -14,9 +17,17 @@ import map from "@/public/map.jpg";
 import SubmitButton from "./components/SubmitButton";
 
 const Home = () => {
+    const projectsRef = useRef<HTMLElement | null>(null);
+    const aboutRef = useRef<HTMLElement | null>(null);
+    const contactRef = useRef<HTMLElement | null>(null);
+
     return (
         <>
-            <Header />
+            <Header
+                projectsRef={projectsRef}
+                aboutRef={aboutRef}
+                contactRef={contactRef}
+            />
             <main className="mt-[60px] flex flex-col gap-y-8 pb-4 mx-auto max-w-[1800px] min-w-[320px]">
                 <div className="relative">
                     <Image
@@ -27,7 +38,7 @@ const Home = () => {
                     />
                     <Logo />
                 </div>
-                <Section>
+                <Section ref={projectsRef}>
                     <H2>Projects</H2>
                     <List>
                         {projects?.length ? (
@@ -45,7 +56,7 @@ const Home = () => {
                         )}
                     </List>
                 </Section>
-                <Section>
+                <Section ref={aboutRef}>
                     <H2>About</H2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -84,7 +95,7 @@ const Home = () => {
                         )}
                     </List>
                 </Section>
-                <Section>
+                <Section ref={contactRef}>
                     <H2>Contact</H2>
                     <form className="flex flex-col gap-y-4">
                         <p>
