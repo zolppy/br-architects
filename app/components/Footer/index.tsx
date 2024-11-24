@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="bg-black text-white p-7 text-center">
+        <footer className="bg-black text-white p-7 text-center w-full">
             Powered by{" "}
             <a
                 href="https://github.com/zolppy"

@@ -17,9 +17,14 @@ const Home = () => {
     return (
         <>
             <Header />
-            <main className="mt-[60px] flex flex-col gap-y-8 pb-4">
+            <main className="mt-[60px] flex flex-col gap-y-8 pb-4 mx-auto max-w-[1800px] min-w-[320px]">
                 <div className="relative">
-                    <Image src={architect} alt="" loading="lazy" />
+                    <Image
+                        src={architect}
+                        alt=""
+                        loading="lazy"
+                        className="w-full"
+                    />
                     <Logo />
                 </div>
                 <Section>
@@ -105,7 +110,7 @@ const Home = () => {
                     </form>
                 </Section>
                 <Section>
-                    <Image src={map} alt="" loading="lazy" />
+                    <Image src={map} alt="" loading="lazy" className="w-full" />
                 </Section>
             </main>
             <Footer />
