@@ -7,14 +7,24 @@ interface IPeople {
     position: string;
     description: string;
     imgPath: StaticImageData;
+    imgAlt: string;
+    imgTitle: string;
 }
 
-const People = ({ name, position, description, imgPath }: IPeople) => {
+const People = ({
+    name,
+    position,
+    description,
+    imgPath,
+    imgAlt,
+    imgTitle,
+}: IPeople) => {
     return (
         <li className="flex flex-col gap-y-2">
             <Image
                 src={imgPath}
-                alt=""
+                alt={imgAlt}
+                title={imgTitle}
                 loading="lazy"
                 className="w-full grayscale-[80%]"
             />

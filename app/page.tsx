@@ -32,7 +32,7 @@ const Home = () => {
                 <div className="relative">
                     <Image
                         src={architect}
-                        alt=""
+                        alt="Building seen from below with blue sky and clouds."
                         loading="lazy"
                         className="w-full"
                     />
@@ -42,13 +42,17 @@ const Home = () => {
                     <H2>Projects</H2>
                     <List>
                         {projects?.length ? (
-                            projects?.map(({ id, title, imgPath }) => (
-                                <Project
-                                    key={id}
-                                    title={title}
-                                    imgPath={imgPath}
-                                />
-                            ))
+                            projects?.map(
+                                ({ id, title, imgPath, imgAlt, imgTitle }) => (
+                                    <Project
+                                        key={id}
+                                        title={title}
+                                        imgPath={imgPath}
+                                        imgAlt={imgAlt}
+                                        imgTitle={imgTitle}
+                                    />
+                                )
+                            )
                         ) : (
                             <li className="text-xl">
                                 Sem projetos para exibir
@@ -80,6 +84,8 @@ const Home = () => {
                                     position,
                                     description,
                                     imgPath,
+                                    imgAlt,
+                                    imgTitle,
                                 }) => (
                                     <People
                                         key={id}
@@ -87,6 +93,8 @@ const Home = () => {
                                         position={position}
                                         description={description}
                                         imgPath={imgPath}
+                                        imgAlt={imgAlt}
+                                        imgTitle={imgTitle}
                                     />
                                 )
                             )
@@ -101,21 +109,29 @@ const Home = () => {
                         <p>
                             Lets get in touch and talk about your next project.
                         </p>
-                        <Input type="text" required={true} placeholder="Name" />
+                        <Input
+                            type="text"
+                            required={true}
+                            placeholder="Name"
+                            ariaLabelText="Name"
+                        />
                         <Input
                             type="email"
                             required={true}
                             placeholder="Email"
+                            ariaLabelText="Email"
                         />
                         <Input
                             type="text"
                             required={true}
                             placeholder="Subject"
+                            ariaLabelText="Subject"
                         />
                         <Input
                             type="text"
                             required={true}
                             placeholder="Comment"
+                            ariaLabelText="Comment"
                         />
                         <SubmitButton>Send message</SubmitButton>
                     </form>
