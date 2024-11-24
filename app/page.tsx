@@ -3,6 +3,11 @@ import Header from "@/app/components/Header";
 import Project from "@/app/components/Project";
 import H2 from "@/app/components/H2";
 import People from "@/app/components/People";
+import Footer from "@/app/components/Footer";
+import Input from "@/app/components/Input";
+import Section from "@/app/components/Section";
+import List from "@/app/components/List";
+import Logo from "@/app/components/Logo";
 import { people, projects } from "@/app/mock";
 import architect from "@/public/architect.jpg";
 import map from "@/public/map.jpg";
@@ -14,16 +19,11 @@ const Home = () => {
             <main className="mt-[60px] flex flex-col gap-y-8 pb-4">
                 <div className="relative">
                     <Image src={architect} alt="" loading="lazy" />
-                    <div className="absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl items-center gap-x-4 md:flex">
-                        <span className="font-bold  bg-black opacity-80 p-4">
-                            BR
-                        </span>
-                        <span className="hidden md:block">Architects</span>
-                    </div>
+                    <Logo />
                 </div>
-                <section className="px-5 flex flex-col gap-y-8">
+                <Section>
                     <H2>Projects</H2>
-                    <ul className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    <List>
                         {projects?.length ? (
                             projects?.map(({ id, title, imgPath }) => (
                                 <Project
@@ -37,9 +37,9 @@ const Home = () => {
                                 Sem projetos para exibir
                             </li>
                         )}
-                    </ul>
-                </section>
-                <section className="px-5 flex flex-col gap-y-8">
+                    </List>
+                </Section>
+                <Section>
                     <H2>About</H2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -54,7 +54,7 @@ const Home = () => {
                         exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat.
                     </p>
-                    <ul className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    <List>
                         {people?.length ? (
                             people?.map(
                                 ({
@@ -76,37 +76,29 @@ const Home = () => {
                         ) : (
                             <li className="text-xl">Sem pessoas para exibir</li>
                         )}
-                    </ul>
-                </section>
-                <section className="px-5 flex flex-col gap-y-8">
+                    </List>
+                </Section>
+                <Section>
                     <H2>Contact</H2>
                     <form className="flex flex-col gap-y-4">
                         <p>
                             Lets get in touch and talk about your next project.
                         </p>
-                        <input
-                            type="text"
-                            required
-                            placeholder="Name"
-                            className="border p-2"
-                        />
-                        <input
+                        <Input type="text" required={true} placeholder="Name" />
+                        <Input
                             type="email"
-                            required
+                            required={true}
                             placeholder="Email"
-                            className="border p-2"
                         />
-                        <input
+                        <Input
                             type="text"
-                            required
+                            required={true}
                             placeholder="Subject"
-                            className="border p-2"
                         />
-                        <input
+                        <Input
                             type="text"
-                            required
+                            required={true}
                             placeholder="Comment"
-                            className="border p-2"
                         />
                         <button
                             type="submit"
@@ -115,21 +107,12 @@ const Home = () => {
                             Send message
                         </button>
                     </form>
-                </section>
-                <section className="px-5">
+                </Section>
+                <Section>
                     <Image src={map} alt="" loading="lazy" />
-                </section>
+                </Section>
             </main>
-            <footer className="bg-black text-white p-7 text-center">
-                Powered by{" "}
-                <a
-                    href="https://github.com/zolppy"
-                    target="_blank"
-                    className="underline"
-                >
-                    Zolppy
-                </a>
-            </footer>
+            <Footer />
         </>
     );
 };
