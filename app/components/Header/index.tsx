@@ -6,9 +6,15 @@ const Header = () => {
             </h1>
             <nav className="hidden md:block">
                 <ul className="flex gap-x-8">
-                    <li>Projects</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors transition-300">
+                        Projects
+                    </li>
+                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors transition-300">
+                        About
+                    </li>
+                    <li className="hover:cursor-pointer hover:bg-gray-300 p-2 transition-colors transition-300">
+                        Contact
+                    </li>
                 </ul>
             </nav>
         </header>

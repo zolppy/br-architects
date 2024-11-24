@@ -102,7 +102,7 @@ const Home = () => {
                         />
                         <button
                             type="submit"
-                            className="uppercase bg-black text-white py-2 px-5 w-fit hover:bg-gray-500"
+                            className="uppercase bg-black text-white py-2 px-5 w-fit hover:bg-gray-300 hover:text-black"
                         >
                             Send message
                         </button>
