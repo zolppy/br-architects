@@ -14,7 +14,7 @@ import Logo from "@/app/components/Logo";
 import { people, projects } from "@/app/mock";
 import architect from "@/public/architect.jpg";
 import map from "@/public/map.jpg";
-import SubmitButton from "./components/SubmitButton";
+import SubmitButton from "@/app/components/SubmitButton";
 
 const Home = () => {
     const projectsRef = useRef<HTMLElement | null>(null);

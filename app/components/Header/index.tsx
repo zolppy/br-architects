@@ -1,6 +1,12 @@
 import { RefObject } from "react";
 
-const Header = ({ projectsRef, aboutRef, contactRef }: any) => {
+interface IHeader {
+    projectsRef: RefObject<HTMLElement>;
+    aboutRef: RefObject<HTMLElement>;
+    contactRef: RefObject<HTMLElement>;
+}
+
+const Header = ({ projectsRef, aboutRef, contactRef }: IHeader) => {
     const scrollToSection = (ref: RefObject<HTMLElement>) => {
         ref?.current?.scrollIntoView({ behavior: "smooth" });
     };

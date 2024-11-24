@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 import house1 from "@/public/houses/house1.jpg";
 import house2 from "@/public/houses/house2.jpg";
 import house3 from "@/public/houses/house3.jpg";
@@ -8,7 +10,25 @@ import person2 from "@/public/people/person2.jpg";
 import person3 from "@/public/people/person3.jpg";
 import person4 from "@/public/people/person4.jpg";
 
-const projects = [
+interface IProject {
+    id: number;
+    title: string;
+    imgPath: StaticImageData;
+    imgAlt: string;
+    imgTitle: string;
+}
+
+interface IPerson {
+    id: number;
+    name: string;
+    position: string;
+    description: string;
+    imgPath: StaticImageData;
+    imgAlt: string;
+    imgTitle: string;
+}
+
+const projects: IProject[] = [
     {
         id: 1,
         title: "Summer House",
@@ -67,7 +87,7 @@ const projects = [
     },
 ];
 
-const people = [
+const people: IPerson[] = [
     {
         id: 1,
         name: "John Doe",

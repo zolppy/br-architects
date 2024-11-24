@@ -1,4 +1,10 @@
-const SubmitButton = ({ children }: { children: React.ReactNode }) => {
+import { ReactNode } from "react";
+
+interface ISubmitButton {
+    children: ReactNode;
+}
+
+const SubmitButton = ({ children }: ISubmitButton) => {
     return (
         <button
             type="submit"
