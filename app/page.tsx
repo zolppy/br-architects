@@ -11,6 +11,7 @@ import Logo from "@/app/components/Logo";
 import { people, projects } from "@/app/mock";
 import architect from "@/public/architect.jpg";
 import map from "@/public/map.jpg";
+import SubmitButton from "./components/SubmitButton";
 
 const Home = () => {
     return (
@@ -100,12 +101,7 @@ const Home = () => {
                             required={true}
                             placeholder="Comment"
                         />
-                        <button
-                            type="submit"
-                            className="uppercase bg-black text-white py-2 px-5 w-fit hover:bg-gray-300 hover:text-black"
-                        >
-                            Send message
-                        </button>
+                        <SubmitButton>Send message</SubmitButton>
                     </form>
                 </Section>
                 <Section>

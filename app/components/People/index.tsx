@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactButton from "@/app/components/ContactButton";
 import { StaticImageData } from "next/image";
 
 interface IPeople {
@@ -20,9 +21,7 @@ const People = ({ name, position, description, imgPath }: IPeople) => {
             <h3 className="font-bold text-2xl">{name}</h3>
             <p className="text-gray-500">{position}</p>
             <p>{description}</p>
-            <button className="bg-gray-100 p-2 hover:bg-gray-300">
-                Contact
-            </button>
+            <ContactButton>Contact</ContactButton>
         </li>
     );
 };
