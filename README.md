@@ -28,4 +28,4 @@ You can access the page <a href="https://br-architects-xi.vercel.app/">here</a>.
 
 ## Credits
 
-The page **design** was inspired by <a href="https://www.w3schools.com/w3css/w3css_templates.asp">access</a>.
+The page **design** was inspired by <a href="https://www.w3schools.com/w3css/w3css_templates.asp">W3C</a>.
