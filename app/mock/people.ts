@@ -1,4 +1,4 @@
-import IPerson from "@/app/utils/interfaces/person";
+import type IPerson from "@/app/utils/interfaces/person";
 import person1 from "@/public/people/person1.jpg";
 import person2 from "@/public/people/person2.jpg";
 import person3 from "@/public/people/person3.jpg";
