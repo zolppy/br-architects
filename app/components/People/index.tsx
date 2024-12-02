@@ -25,7 +25,6 @@ const People = ({
                 src={imgPath}
                 alt={imgAlt}
                 title={imgTitle}
-                loading="lazy"
                 className="w-full grayscale-[80%]"
             />
             <h3 className="font-bold text-2xl">{name}</h3>

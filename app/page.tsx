@@ -136,7 +136,7 @@ const Home = () => {
                     </form>
                 </Section>
                 <Section>
-                    <Image src={map} alt="" loading="lazy" className="w-full" />
+                    <Image src={map} alt="" className="w-full" />
                 </Section>
             </main>
             <Footer />
