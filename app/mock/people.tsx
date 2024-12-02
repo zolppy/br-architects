@@ -1,19 +1,8 @@
-import { StaticImageData } from "next/image";
-
+import IPerson from "@/app/utils/interfaces/person";
 import person1 from "@/public/people/person1.jpg";
 import person2 from "@/public/people/person2.jpg";
 import person3 from "@/public/people/person3.jpg";
 import person4 from "@/public/people/person4.jpg";
-
-interface IPerson {
-    id: number;
-    name: string;
-    position: string;
-    description: string;
-    imgPath: StaticImageData;
-    imgAlt: string;
-    imgTitle: string;
-}
 
 const people: IPerson[] = [
     {
@@ -22,9 +11,11 @@ const people: IPerson[] = [
         position: "CEO & Founder",
         description:
             "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
-        imgPath: person1,
-        imgAlt: "Man with black hair and gray beard smiling",
-        imgTitle: "John Doe",
+        img: {
+            src: person1,
+            alt: "Man with black hair and gray beard smiling",
+            title: "John Doe",
+        },
     },
     {
         id: 2,
@@ -32,9 +23,11 @@ const people: IPerson[] = [
         position: "Architect",
         description:
             "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
-        imgPath: person2,
-        imgAlt: "Blonde woman wearing a hat, necklace and floral blouse, there seems to be a sea behind her",
-        imgTitle: "Jane Doe",
+        img: {
+            src: person2,
+            alt: "Blonde woman wearing a hat, necklace and floral blouse, there seems to be a sea behind her",
+            title: "Jane Doe",
+        },
     },
     {
         id: 3,
@@ -42,9 +35,11 @@ const people: IPerson[] = [
         position: "Architect",
         description:
             "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
-        imgPath: person3,
-        imgAlt: "Elderly man with gray hair and smooth face. He is wearing a green shirt and tie.",
-        imgTitle: "Mike Ross",
+        img: {
+            src: person3,
+            alt: "Elderly man with gray hair and smooth face. He is wearing a green shirt and tie.",
+            title: "Mike Ross",
+        },
     },
     {
         id: 4,
@@ -52,9 +47,11 @@ const people: IPerson[] = [
         position: "Architect",
         description:
             "Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.",
-        imgPath: person4,
-        imgAlt: "Black man wearing glasses on his head and looking up",
-        imgTitle: "Dan Star",
+        img: {
+            src: person4,
+            alt: "Black man wearing glasses on his head and looking up",
+            title: "Dan Star",
+        },
     },
 ];
 

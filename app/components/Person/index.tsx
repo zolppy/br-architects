@@ -1,30 +1,16 @@
 import Image from "next/image";
 import ContactButton from "@/app/components/ContactButton";
-import { StaticImageData } from "next/image";
+import type IPerson from "@/app/utils/interfaces/person";
 
-interface IPeople {
-    name: string;
-    position: string;
-    description: string;
-    imgPath: StaticImageData;
-    imgAlt: string;
-    imgTitle: string;
-}
+const Person = ({ name, position, description, img }: Omit<IPerson, "id">) => {
+    const { src, alt, title } = img;
 
-const People = ({
-    name,
-    position,
-    description,
-    imgPath,
-    imgAlt,
-    imgTitle,
-}: IPeople) => {
     return (
         <li className="flex flex-col gap-y-2">
             <Image
-                src={imgPath}
-                alt={imgAlt}
-                title={imgTitle}
+                src={src}
+                alt={alt}
+                title={title}
                 className="w-full grayscale-[80%]"
             />
             <h3 className="font-bold text-2xl">{name}</h3>
@@ -35,4 +21,4 @@ const People = ({
     );
 };
 
-export default People;
+export default Person;

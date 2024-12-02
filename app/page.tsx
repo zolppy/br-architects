@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Header from "@/app/components/Header";
 import Project from "@/app/components/Project";
 import H2 from "@/app/components/H2";
-import People from "@/app/components/People";
+import Person from "@/app/components/Person";
 import Footer from "@/app/components/Footer";
 import Input from "@/app/components/Input";
 import Section from "@/app/components/Section";
@@ -42,17 +42,13 @@ const Home = () => {
                     <H2>Projects</H2>
                     <List>
                         {projects?.length ? (
-                            projects?.map(
-                                ({ id, title, imgPath, imgAlt, imgTitle }) => (
-                                    <Project
-                                        key={id}
-                                        title={title}
-                                        imgPath={imgPath}
-                                        imgAlt={imgAlt}
-                                        imgTitle={imgTitle}
-                                    />
-                                )
-                            )
+                            projects?.map(({ id, projectTitle, img }) => (
+                                <Project
+                                    key={id}
+                                    projectTitle={projectTitle}
+                                    img={img}
+                                />
+                            ))
                         ) : (
                             <li className="text-xl">
                                 Sem projetos para exibir
@@ -78,23 +74,13 @@ const Home = () => {
                     <List>
                         {people?.length ? (
                             people?.map(
-                                ({
-                                    id,
-                                    name,
-                                    position,
-                                    description,
-                                    imgPath,
-                                    imgAlt,
-                                    imgTitle,
-                                }) => (
-                                    <People
+                                ({ id, name, position, description, img }) => (
+                                    <Person
                                         key={id}
                                         name={name}
                                         position={position}
                                         description={description}
-                                        imgPath={imgPath}
-                                        imgAlt={imgAlt}
-                                        imgTitle={imgTitle}
+                                        img={img}
                                     />
                                 )
                             )

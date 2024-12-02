@@ -1,25 +1,14 @@
 import Image from "next/image";
-import { StaticImageData } from "next/image";
+import type IProject from "@/app/utils/interfaces/project";
 
-interface IProject {
-    title: string;
-    imgPath: StaticImageData;
-    imgAlt: string;
-    imgTitle: string;
-}
-
-const Project = ({ title, imgPath, imgAlt, imgTitle }: IProject) => {
+const Project = ({ projectTitle, img }: Omit<IProject, "id">) => {
+    const { src, alt, title } = img;
     return (
         <li className="relative">
             <div className="absolute bg-black text-white p-2">
-                <h3>{title}</h3>
+                <h3>{projectTitle}</h3>
             </div>
-            <Image
-                src={imgPath}
-                alt={imgAlt}
-                title={imgTitle}
-                className="w-full"
-            />
+            <Image src={src} alt={alt} title={title} className="w-full" />
         </li>
     );
 };
