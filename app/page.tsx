@@ -29,7 +29,7 @@ const Home = () => {
                 aboutRef={aboutRef}
                 contactRef={contactRef}
             />
-            <main className="mt-[60px] flex flex-col gap-y-8 pb-4 mx-auto max-w-[1800px] min-w-[320px]">
+            <main className="mt-[60px] flex flex-col gap-y-8 pb-4 mx-auto max-w-[1536px] min-w-[320px]">
                 <div className="relative">
                     <Image
                         src={architect}
