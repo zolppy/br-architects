@@ -1,4 +1,4 @@
-import IProject from "@/app/utils/interfaces/project";
+import type IProject from "@/app/utils/interfaces/project";
 import house1 from "@/public/houses/house1.jpg";
 import house2 from "@/public/houses/house2.jpg";
 import house3 from "@/public/houses/house3.jpg";
