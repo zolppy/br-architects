@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 interface IImage {
-    src: StaticImageData | string; // pode ser string???
+    src: StaticImageData;
     alt: string;
     title: string;
 }
