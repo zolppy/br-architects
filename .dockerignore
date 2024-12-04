@@ -1,8 +1,47 @@
+# Diretórios de build e cache
+.next
 node_modules
-out
-.git
+.pnpm-debug.log
+.npmrc
+.yarn*
+.yarn-cache/
+.pnp.cjs
+.pnp.loader.mjs
+
+# Arquivos de ambiente locais (sensíveis)
+.env
+.env.local
+.env.*.local
+
+# Configurações específicas de editores de código
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs e arquivos temporários
+logs
 *.log
-*.env
-npm-debug.log
-yarn-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos gerados pelo sistema
+*.swp
+*.swo
+*.tmp
+*.bak
+*.pid
+
+# Outras pastas/arquivos específicos
+coverage/
+dist/
+build/
+*.out
+
+# Ignorar imagens e dados locais, se existirem
+public/uploads/
