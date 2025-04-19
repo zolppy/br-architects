@@ -16,6 +16,7 @@ import projects from "@/app/utils/mock/projects";
 import architect from "@/public/architect.jpg";
 import map from "@/public/map.jpg";
 import SubmitButton from "@/app/components/SubmitButton";
+import CoffeeBtn from "@/app/components/CoffeeBtn";
 
 const Home = () => {
     const projectsRef = useRef<HTMLElement | null>(null);
@@ -125,6 +126,7 @@ const Home = () => {
                 <Section>
                     <Image src={map} alt="" className="w-full" />
                 </Section>
+                <CoffeeBtn />
             </main>
             <Footer />
         </>
