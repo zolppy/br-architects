@@ -23,7 +23,7 @@
 
 ## Demo
 
-You can access the page <a href="https://br-architects-xi.vercel.app/">here</a>.
+You can access the page <a href="https://br-architects-zol.vercel.app">here</a>.
 
 ## Screenshots
 ![1](https://github.com/user-attachments/assets/89971744-3dcf-4fec-89e6-7c79986c7b51)
