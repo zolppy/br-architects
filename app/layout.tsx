@@ -4,29 +4,27 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import "@/app/globals.css";
 
 const roboto = Inter({
-    subsets: ["latin"],
-    display: "swap",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-    title: "BR Architects",
-    description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati, autem fugiat quas, atque quidem unde itaque earum repellendus modi ea vero quod debitis minima fuga rem reiciendis distinctio dolore.",
-    icons: "/favicon.ico",
-    authors: [{ name: "Gabriel Cavalcante de Jesus Oliveira" }],
+  title: "BR Architects",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati, autem fugiat quas, atque quidem unde itaque earum repellendus modi ea vero quod debitis minima fuga rem reiciendis distinctio dolore.",
+  icons: "/favicon.ico",
+  authors: [{ name: "Gabriel Cavalcante de Jesus Oliveira" }],
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="en">
-            <body className={`${roboto.className} antialiased`}>
-                {children}
-            </body>
-            <GoogleAnalytics gaId="G-3MLC7LYZ17" />
-        </html>
-    );
+  return (
+    <html lang="en">
+      <body className={`${roboto.className} antialiased`}>{children}</body>
+      <GoogleAnalytics gaId="G-3MLC7LYZ17" />
+    </html>
+  );
 }
