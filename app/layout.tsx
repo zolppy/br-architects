@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import "@/app/globals.css";
 
 const roboto = Inter({
@@ -24,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} antialiased`}>{children}</body>
-      <GoogleAnalytics gaId="G-3MLC7LYZ17" />
     </html>
   );
 }
